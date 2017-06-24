@@ -7,7 +7,7 @@ RUN \
   sudo apt-get install -y zlib1g-dev &&\
   sudo apt-get install -y -t lucid-security libssl-dev &&\
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  wget build-essential libyaml-dev libxml2-dev libxslt1-dev libreadline-dev
+  wget build-essential libyaml-dev libxml2-dev libxslt1-dev libreadline-dev git
 
 RUN \
   cd /tmp &&\
