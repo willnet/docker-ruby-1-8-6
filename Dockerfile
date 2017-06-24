@@ -15,7 +15,8 @@ RUN \
   cd ruby-build &&\
   sudo ./install.sh
 
-RUN /usr/local/bin/ruby-build 1.8.6-p420 ~/ruby-1.8.6
+RUN CFLAGS="-O2 -fno-tree-dce -fno-optimize-sibling-calls" \
+  /usr/local/bin/ruby-build 1.8.6-p420 ~/ruby-1.8.6
 
 ENV PATH /root/ruby-1.8.6/bin:$PATH
 
